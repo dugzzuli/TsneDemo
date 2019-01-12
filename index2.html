@@ -65,7 +65,7 @@
 				var div = d3.select("#embed");
 				svg = div.append("svg") // svg is global
 					.attr("width", 1140)
-					.attr("height", 1140);
+					.attr("height", 600);
 			}
 
 			var gs;
@@ -217,10 +217,6 @@
 						console.log('raw');
 						T.initDataRaw(data);
 					}
-					if(dfv === 'dist') {
-						console.log('dist');
-						T.initDataDist(data);
-					}
 					drawEmbedding();
 					iid = setInterval(step, 10);
 					dotrain = true;
@@ -246,8 +242,8 @@
 		<div class="container">
 			<hr>
 			<div class="row">
-				<div class="col-sm-6">
-					<b>(optional) Text labels:</b><br>
+				<div class="col-sm-12">
+					<b>Text labels:</b><br>
 					<textarea id="inlabels" style="width:100%; height:100px;">
 Alabama
 Alaska
@@ -301,10 +297,7 @@ Wisconsin
 Wyoming
       </textarea>
 				</div>
-				<div class="col-sm-6">
-					<b style="color:#999;">(optional) Data groups:</b><br>
-					<textarea id="ingroup" style="width:100%; height:100px;">not yet implemented</textarea>
-				</div>
+
 			</div>
 		</div>
 
@@ -378,7 +371,6 @@ Wyoming
 					My data is:
 					<form action="" id="datatypeform">
 						<input type="radio" name="rdata" value="raw" checked> Raw NxD data (each row are features)<br>
-						<input type="radio" name="rdata" value="dist"> NxN Distance
 					</form>
 				</div>
 				<div class="col-sm-4">
@@ -403,8 +395,9 @@ Wyoming
 
 		<div class="container">
 			<hr>
-			<a href="https://github.com/karpathy/tsnejs">tsnejs documentation</a><br> Maintained by
-			<a href="https://twitter.com/karpathy">@karpathy</a>.
+			<div class="col-sm-12 center-block text-center">
+				<a href="javascript:void(0)" >dugking</a><br> <br> 
+			</div>
 		</div>
 
 	</body>
